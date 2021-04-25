@@ -1,0 +1,12 @@
+body {
+  background-color: #08aeea;
+  background-image: linear-gradient(45deg, #08aeea 0%, #2af598 100%);
+  height: 100vh;
+}
+
+.jumbotron {
+  padding: 2rem 1rem;
+  margin-bottom: 2rem;
+  background-color: #e9ecef;
+  border-radius: 0.3rem;
+}
