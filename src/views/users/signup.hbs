@@ -1,17 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <form action="">
-        <label for="">Your email</label>
-        <input type="text" name="" id="">
-        <label for="">Your password</label>
-        <input type="password" name="" id="">
-    </form>
-</body>
-</html>
+<form class="form" action="/users/signup" method="POST">
+    <h2 class="form__title">Account Register</h2>
+    <input name="name" autofocus placeholder="Name" value="{{name}}">
+    <input type="email" name="email" placeholder="Email" value="{{email}}">
+    <input type="password" name="password" placeholder="Password" value="{{password}}">
+    <input type="password" name="confirm_password" placeholder="Confirm Password" value="{{confirm_password}}">
+    <button type="submit" class="btn btn-primary">
+        SignUp
+    </button>
+</form>

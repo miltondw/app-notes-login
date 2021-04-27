@@ -1,0 +1,18 @@
+<div id="alerts" class="alerts">
+    {{#each errors}}
+    <div class="alert alert-error show">
+        <p class="alert__message">
+            {{text}}
+        </p>
+    </div>
+    {{/each}}
+</div>
+<div id="alerts" class="alerts">
+    {{#if error}}
+    <div class="alert alert-error show">
+        <p class="alert__message">
+            {{error}}
+        </p>
+    </div>
+    {{/if}}
+</div>

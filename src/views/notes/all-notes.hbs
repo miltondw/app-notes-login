@@ -1,0 +1,42 @@
+<div class="card__content">
+    {{#each notes}}
+    <div class="card__content__notes">
+        <div class="card__header">
+            <h1 class="card__title">
+                {{this.title}}
+            </h1>
+            <a href="/notes/edit/{{this._id}}">
+                <i class="fas fa-edit btn btn-edit"></i>
+            </a>
+        </div>
+        <p class="card__description">
+            {{this.description}}
+        </p>
+        <form action="/notes/delete/{{this._id}}?_method=DELETE" method="POST">
+            <input type="hidden" name="_method" value="DELETE">
+            <button class="btn btn-delit" type="submit">
+                Delete
+            </button>
+        </form>
+    </div>
+    {{else}}
+    <div class="card__content__notes card__defaul">
+        <div class="card__header">
+            
+            <h1 class="card__title">
+              Hi {{itemuser.name}}
+            </h1>
+            
+            
+        </div>
+        <p class="card__description">
+             You have no notes created 
+        </p>
+        <button class="btn btn-primary ">
+            <a href="/notes/add">
+                Create Now
+            </a>
+        </button>
+    </div>
+    {{/each}}
+</div>

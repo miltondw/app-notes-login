@@ -1,0 +1,17 @@
+<header class="header">
+    <h3 class="logo"><a href="/">App Note</a></h3>
+    <nav class="navbar">
+        <ul class="navbar__content">
+            <li class="navbar__item"><a href="/">Home</a></li>
+            <li class="navbar__item"><a href="/about">About</a></li>
+            {{#if user}}
+            <li class="navbar__item"><a href="/notes">Notes</a></li>
+            <li class="navbar__item"><a href="/notes/add">Create Note</a></li>
+            <li class="navbar__item"><a href="/users/logout">Logout</a></li>
+            {{else}}
+            <li class="navbar__item"><a href="/users/signup">SignUp</a></li>
+            <li class="navbar__item"><a href="/users/signin">SignIn</a></li>
+            {{/if}}
+        </ul>
+    </nav>
+</header>
