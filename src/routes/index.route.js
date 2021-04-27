@@ -1,10 +1,10 @@
 const route = require("express").Router();
+const {
+  renderIndex,
+  renderAbout,
+} = require("../controllers/index.controllers");
 
-route.get("/", (req, res) => {
-  res.render('index')
-});
-route.get("/about", (req, res) => {
-  res.render("about");
-});
+route.get("/", renderIndex);
+route.get("/about", renderAbout);
 
 module.exports = route;

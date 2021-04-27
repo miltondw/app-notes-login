@@ -1,4 +1,6 @@
 const helpers = {}
+
+// Authenticating the user
 helpers.isAuthenticated = (req,res,next)=>{
     if(req.isAuthenticated()){
         return next()
