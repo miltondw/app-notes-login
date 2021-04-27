@@ -1,5 +1,19 @@
 # Apllication notes with login and CRUD 
-Notes app created with the following stack
+
+You nedd to have mongodb install locally to start the proyect 
+
+### This command starts the database
+
+```
+mongod
+```
+### This command Start the development server
+
+```
+npm run dev
+```
+
+# Notes app created with the following stack
 
 ## Frondend
 
