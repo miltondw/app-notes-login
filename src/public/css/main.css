@@ -1,9 +1,9 @@
 /* Variables */
 :root {
   --text-color: #ffffff;
-  --text-color-secondary:#e9ecef;
-  --color-primary:#08aeea;
-  --color-secondary:#2af598;
+  --text-color-secondary: #e9ecef;
+  --color-primary: #08aeea;
+  --color-secondary: #2af598;
   --font-title: 2rem;
 }
 /* General */
@@ -15,9 +15,14 @@
 }
 body {
   background-color: var(--color-primary);
-  background-image: linear-gradient(45deg, var(--color-primary)0%, var(--color-secondary) 100%);
-  height: 100vh;
+  background-image: linear-gradient(
+    45deg,
+    var(--color-primary) 0%,
+    var(--color-secondary) 100%
+  );
+  min-height: 100vh;
   display: grid;
+  position: relative;
 }
 
 .jumbotron {
@@ -35,6 +40,7 @@ body {
   display: flex;
   justify-content: center;
   position: relative;
+  margin-bottom: 4em;
 }
 a {
   text-decoration: none;
@@ -62,25 +68,25 @@ a {
   justify-content: center;
   align-items: center;
   border-radius: 10px;
-  transition-property:display;
+  transition-property: display;
   transition-duration: 1s;
 }
-.btn-danger{
+.btn-danger {
   border-radius: 50%;
   background-color: red;
   color: var(--text-color);
-  padding: .1em;
+  padding: 0.1em;
   width: 6%;
 }
-.btn-edit{
+.btn-edit {
   font-size: 1.2em;
   color: var(--text-color-secondary);
   height: 1em;
 }
-.btn-edit:hover{
+.btn-edit:hover {
   color: var(--color-primary);
 }
-.btn-delit{
+.btn-delit {
   background: red;
   color: var(--text-color);
   width: 100%;
@@ -96,32 +102,32 @@ a {
   color: var(--text-color);
   font-size: 1.5em;
 }
-.show{
+.show {
   animation: show 30s ease-in-out forwards;
 }
 /* Animations */
 
 @keyframes show {
-  0%{
+  0% {
     transform: translateX(0);
   }
-  100%{
+  100% {
     transform: translateX(-30000px);
   }
 }
 
-.alert{
-  border-radius: 15px; 
+.alert {
+  border-radius: 15px;
   align-content: center;
   justify-content: space-between;
   display: flex;
   flex-wrap: wrap;
-  padding: .5em;
+  padding: 0.5em;
 }
-.alert-error{
-  background: rgba(255,0,0,.7);
+.alert-error {
+  background: rgba(255, 0, 0, 0.7);
 }
-.alert-success{
+.alert-success {
   background-color: var(--color-secondary);
 }
 
@@ -132,7 +138,7 @@ a {
   justify-content: space-evenly;
   align-items: center;
 }
-.logo a{
+.logo a {
   font-size: 2em;
   color: var(--color-primary);
 }
@@ -154,7 +160,7 @@ footer {
 .navbar__item a {
   text-decoration: none;
   font-size: 1.2rem;
-  color: var(--color-primary)
+  color: var(--color-primary);
 }
 .navbar__item a:hover {
   color: var(--color-secondary);
@@ -172,10 +178,41 @@ footer {
 .paragraph {
   padding: 1em;
 }
+.index-content {
+  list-style: none;
+  padding: 1em;
+}
+.index-content__title {
+  font-size: 1.5em;
+  color: var(--color-primary);
+}
+.index-content__item {
+  margin: 1em;
+  border-left: 1px solid var(--color-secondary);
+  padding-left: 0.5em;
+}
+.index-content__link {
+  font-size: 1.2em;
+  color: var(--color-secondary);
+  font-weight: bolder;
+}
+.index-content__paragraph {
+  padding: 0.3em;
+}
+p {
+  color: rgb(73, 63, 63);
+}
+
 /* Footer */
 footer {
   align-self: end;
   margin-bottom: 0;
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2em;
 }
 
 /* FORM */
@@ -228,28 +265,28 @@ textarea {
 .card__defaul {
   grid-column: 2/4;
 }
-.card__content{
+.card__content {
   display: grid;
-  grid-template-columns: repeat(4,minmax(max-content, auto))
+  grid-template-columns: repeat(4, minmax(max-content, auto));
 }
 .card__content__notes {
   border: 1px solid #ccc;
   margin: 1em;
   padding: 1em;
-  background: rgba(0,0,0,.2);
+  background: rgba(0, 0, 0, 0.2);
   color: var(--text-color);
   display: flex;
   flex-direction: column;
   height: fit-content;
 }
-.card__content__notes:hover{
+.card__content__notes:hover {
   box-shadow: 2px 1px 4px 3px;
 }
 .card__header {
   display: flex;
   justify-content: space-between;
 }
-.card__title{
+.card__title {
   color: var(--text-color);
   text-transform: capitalize;
 }

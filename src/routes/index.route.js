@@ -5,6 +5,5 @@ const {
 } = require("../controllers/index.controllers");
 
 route.get("/", renderIndex);
-route.get("/about", renderAbout);
 
 module.exports = route;
