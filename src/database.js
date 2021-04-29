@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
-
+const URI = process.env.MONGOODB_URI
 mongoose
-  .connect("mongodb://localhost/notesdb", {
+  .connect(URI, {
     useCreateIndex: true,
     useNewUrlParser: true,
     useFindAndModify: false,
